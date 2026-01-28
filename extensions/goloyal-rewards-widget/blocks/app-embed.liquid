@@ -1,0 +1,13 @@
+{% if app.metafields.goloyal.enabled != false %}
+  <div id="goloyal-widget-root"></div>
+
+  {{ 'goloyal-widget.css' | asset_url | stylesheet_tag }}
+  {{ 'goloyal-widget.js' | asset_url | script_tag }}
+{% endif %}
+{% schema %}
+{
+  "name": "GoLoyal Rewards Widget",
+  "target": "body",
+  "settings": []
+}
+{% endschema %}

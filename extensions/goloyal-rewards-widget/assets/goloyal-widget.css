@@ -1,0 +1,39 @@
+#goloyal-widget-button {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  z-index: 9999;
+
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+
+  background: #111827;
+  color: #ffffff;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 14px;
+  cursor: pointer;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
+}
+
+#goloyal-widget-modal {
+  position: fixed;
+  bottom: 90px;
+  right: 24px;
+  z-index: 9999;
+
+  width: 320px;
+  max-height: 400px;
+
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.25);
+
+  display: none;
+  flex-direction: column;
+  overflow: hidden;
+}
