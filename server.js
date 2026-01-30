@@ -1,23 +1,19 @@
 import express from "express";
-import { createRequestHandler } from "@react-router/express";
-import * as build from "./build/server/index.js";
+import handleRequest from "./build/server/index.js";
 
 const app = express();
 
-// Static assets
-app.use(express.static("build/client"));
+app.all("/*", async (req, res) => {
+  try {
+    const response = await handleRequest(req);
+    res.status(response.status).send(response.body);
+  } catch (err) {
+    console.error(err);
+    res.status(500).send("Server error");
+  }
+});
 
-// React Router request handling
-app.all(
-  "*",
-  createRequestHandler({
-    build,
-  })
-);
-
-// REQUIRED for Render
 const port = process.env.PORT || 3000;
-
 app.listen(port, () => {
-  console.log(`GoLoyal server listening on port ${port}`);
+  console.log(`Server running on port ${port}`);
 });
