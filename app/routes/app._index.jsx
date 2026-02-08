@@ -9,7 +9,6 @@ import {
   InlineStack,
   Banner,
   Checkbox,
-  Spinner,
 } from "@shopify/polaris";
 import { authenticate } from "../shopify.server";
 import { supabase } from "../supabase.server";
