@@ -1,3 +1,9 @@
 .cache
 build
 node_modules
+*.sqlite
+*.sqlite-journal
+.env
+.git
+.cursor
+.gemini
