@@ -15,7 +15,7 @@ app.use(
 app.use(express.static("build/client", { maxAge: "1h" }));
 
 app.all(
-  "(.*)",
+  "*",
   createRequestHandler({
     build: await import("./build/server/index.js"),
   }),
